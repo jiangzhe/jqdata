@@ -1,7 +1,7 @@
 [package]
 name = "jqdata-blocking"
 description = "Blocking client of JQData"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["jiangzhe <zhe.jiang@transwarp.io>"]
 edition = "2018"
 keywords = ["joinquant", "quant", "jqdata"]

@@ -15,6 +15,7 @@ fn jqdata_url() -> String {
     mockito::server_url()
 }
 
+#[derive(Debug, Clone)]
 pub struct JqdataClient {
     token: String,
 }
