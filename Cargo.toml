@@ -1,0 +1,15 @@
+[package]
+name = "jqdata"
+description = "Rust implementation for JQData client"
+version = "0.1.0"
+authors = ["Zhe Jiang <nju.jiangzhe@gmail.com>"]
+edition = "2018"
+keywords = ["joinquant", "quant", "jqdata"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/jiangzhe/jqdata"
+readme = "README.md"
+
+[workspace]
+members = ["jqdata-derive", "jqdata-blocking"]
+
+[dependencies]

@@ -1,0 +1,19 @@
+[package]
+name = "jqdata-derive"
+description = "derive macros for JQData client"
+version = "0.1.0"
+authors = ["jiangzhe <zhe.jiang@transwarp.io>"]
+edition = "2018"
+keywords = ["joinquant", "quant", "jqdata"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/jiangzhe/jqdata/jqdata-derive"
+workspace = ".."
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+proc-macro2 = "1.0.9"
+
+[lib]
+proc_macro = true
