@@ -1,7 +1,5 @@
 pub use jqdata_model::*;
 
-use crate::Error;
-use crate::{Request, HasMethod, BodyConsumer};
 #[cfg(test)]
 use mockito;
 use reqwest::header::{HeaderValue, CONTENT_TYPE};
