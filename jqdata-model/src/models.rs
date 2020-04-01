@@ -1,6 +1,7 @@
 use serde_derive::*;
 use serde::Deserialize;
 use jqdata_derive::*;
+use bigdecimal::BigDecimal;
 use std::io::Read;
 use crate::{Result, Error};
 
@@ -199,9 +200,9 @@ pub struct GetLockedShares {
 pub struct LockedShare {
     pub day: String,
     pub code: String,
-    pub num: f64,
-    pub rate1: f64,
-    pub rate2: f64,
+    pub num: BigDecimal,
+    pub rate1: BigDecimal,
+    pub rate2: BigDecimal,
 }
 
 /// 获取指数成份股给定日期的权重数据，每月更新一次
@@ -220,7 +221,7 @@ pub struct IndexWeight {
     pub code: String,
     pub display_name: String,
     pub date: String,
-    pub weight: f64,
+    pub weight: BigDecimal,
 }
 
 /// 按照行业分类获取行业列表
@@ -351,12 +352,12 @@ pub struct GetMtss {
 pub struct Mtss {
     pub date: String,
     pub sec_code: String,
-    pub fin_value: f64,
-    pub fin_refund_value: f64,
-    pub sec_value: f64,
-    pub sec_sell_value: f64,
-    pub sec_refund_value: f64,
-    pub fin_sec_value: f64,
+    pub fin_value: BigDecimal,
+    pub fin_refund_value: BigDecimal,
+    pub sec_value: BigDecimal,
+    pub sec_sell_value: BigDecimal,
+    pub sec_refund_value: BigDecimal,
+    pub fin_sec_value: BigDecimal,
 }
 
 /// 获取一只股票在一个时间段内的资金流向数据，仅包含股票数据，不可用于获取期货数据
@@ -391,17 +392,17 @@ pub struct GetMoneyFlow {
 pub struct MoneyFlow {
     pub date: String,
     pub sec_code: String,
-    pub change_pct: f64,
-    pub net_amount_main: f64,
-    pub net_pct_main: f64,
-    pub net_amount_xl: f64,
-    pub net_pct_xl: f64,
-    pub net_amount_l: f64,
-    pub net_pct_l: f64,
-    pub net_amount_m: f64,
-    pub net_pct_m: f64,
-    pub net_amount_s: f64,
-    pub net_pct_s: f64,
+    pub change_pct: BigDecimal,
+    pub net_amount_main: BigDecimal,
+    pub net_pct_main: BigDecimal,
+    pub net_amount_xl: BigDecimal,
+    pub net_pct_xl: BigDecimal,
+    pub net_amount_l: BigDecimal,
+    pub net_pct_l: BigDecimal,
+    pub net_amount_m: BigDecimal,
+    pub net_pct_m: BigDecimal,
+    pub net_amount_s: BigDecimal,
+    pub net_pct_s: BigDecimal,
 }
 
 /// 获取指定日期区间内的龙虎榜数据
@@ -441,13 +442,13 @@ pub struct BillboardStock {
     pub abnormal_code: String,
     pub abnormal_name: String,
     pub sales_depart_name: String,
-    pub buy_value: f64,
-    pub buy_rate: f64,
-    pub sell_value: f64,
-    pub sell_rate: f64,
-    pub total_value: f64,
-    pub net_value: f64,
-    pub amount: f64,
+    pub buy_value: BigDecimal,
+    pub buy_rate: BigDecimal,
+    pub sell_value: BigDecimal,
+    pub sell_rate: BigDecimal,
+    pub total_value: BigDecimal,
+    pub net_value: BigDecimal,
+    pub amount: BigDecimal,
 }
 
 /// 获取某期货品种在指定日期下的可交易合约标的列表
@@ -511,12 +512,12 @@ pub struct FundInfo {
     pub fund_custodian_fee: String,
     pub fund_status: String,
     pub fund_size: String,
-    pub fund_share: f64,
+    pub fund_share: BigDecimal,
     pub fund_asset_allocation_proportion: String,
     pub heavy_hold_stocks: Vec<String>,
-    pub heavy_hold_stocks_proportion: f64,
+    pub heavy_hold_stocks_proportion: BigDecimal,
     pub heavy_hold_bond: Vec<String>,
-    pub heavy_hold_bond_proportion: f64,
+    pub heavy_hold_bond_proportion: BigDecimal,
 }
 
 /// 获取最新的 tick 数据
@@ -543,33 +544,33 @@ pub struct GetCurrentTick {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Tick {
-    pub time: f64,
-    pub current: f64,
-    pub high: f64,
-    pub low: f64,
-    pub volumn: f64,
-    pub money: f64,
-    pub position: f64,
-    pub a1_v: f64,
-    pub a2_v: f64,
-    pub a3_v: f64,
-    pub a4_v: f64,
-    pub a5_v: f64,
-    pub a1_p: f64,
-    pub a2_p: f64,
-    pub a3_p: f64,
-    pub a4_p: f64,
-    pub a5_p: f64,
-    pub b1_v: f64,
-    pub b2_v: f64,
-    pub b3_v: f64,
-    pub b4_v: f64,
-    pub b5_v: f64,
-    pub b1_p: f64,
-    pub b2_p: f64,
-    pub b3_p: f64,
-    pub b4_p: f64,
-    pub b5_p: f64,
+    pub time: BigDecimal,
+    pub current: BigDecimal,
+    pub high: BigDecimal,
+    pub low: BigDecimal,
+    pub volumn: BigDecimal,
+    pub money: BigDecimal,
+    pub position: BigDecimal,
+    pub a1_v: BigDecimal,
+    pub a2_v: BigDecimal,
+    pub a3_v: BigDecimal,
+    pub a4_v: BigDecimal,
+    pub a5_v: BigDecimal,
+    pub a1_p: BigDecimal,
+    pub a2_p: BigDecimal,
+    pub a3_p: BigDecimal,
+    pub a4_p: BigDecimal,
+    pub a5_p: BigDecimal,
+    pub b1_v: BigDecimal,
+    pub b2_v: BigDecimal,
+    pub b3_v: BigDecimal,
+    pub b4_v: BigDecimal,
+    pub b5_v: BigDecimal,
+    pub b1_p: BigDecimal,
+    pub b2_p: BigDecimal,
+    pub b3_p: BigDecimal,
+    pub b4_p: BigDecimal,
+    pub b5_p: BigDecimal,
 }
 
 /// 获取多标的最新的 tick 数据
@@ -654,12 +655,12 @@ pub struct GetPrice {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Price {
     pub date: String,
-    pub open: f64,
-    pub close: f64,
-    pub high: f64,
-    pub low: f64,
-    pub volume: f64,
-    pub money: f64,
+    pub open: BigDecimal,
+    pub close: BigDecimal,
+    pub high: BigDecimal,
+    pub low: BigDecimal,
+    pub volume: BigDecimal,
+    pub money: BigDecimal,
     pub paused: Option<u8>,
     pub high_limit: Option<f64>,
     pub low_limit: Option<f64>,
