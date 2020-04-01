@@ -1,0 +1,19 @@
+[package]
+name = "jqdata-model"
+description = "utility for jqdata"
+version = "0.2.0"
+authors = ["Zhe Jiang <nju.jiangzhe@gmail.com>"]
+edition = "2018"
+keywords = ["joinquant", "quant", "jqdata"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/jiangzhe/jqdata/jqdata-utils"
+workspace = ".."
+
+[dependencies]
+serde_json = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+csv = "1.1"
+# mockito = "0.23"
+jqdata-derive = { version = "0.2.0", path = "../jqdata-derive" }

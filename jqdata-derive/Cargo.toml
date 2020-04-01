@@ -1,7 +1,7 @@
 [package]
 name = "jqdata-derive"
 description = "derive macros for JQData client"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["jiangzhe <zhe.jiang@transwarp.io>"]
 edition = "2018"
 keywords = ["joinquant", "quant", "jqdata"]
