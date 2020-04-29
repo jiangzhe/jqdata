@@ -20,7 +20,7 @@ serde_derive = "1.0"
 csv = "1.1"
 mockito = "0.23"
 jqdata-derive = { version = "0.2", path = "./jqdata-derive" }
-jqdata-model = { version = "0.3.1", path = "./jqdata-model" }
+jqdata-model = { version = "0.3.2", path = "./jqdata-model" }
 futures-util = "0.3"
 futures = "0.3"
 

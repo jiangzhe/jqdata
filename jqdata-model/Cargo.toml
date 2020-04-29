@@ -1,7 +1,7 @@
 [package]
 name = "jqdata-model"
 description = "utility for jqdata"
-version = "0.3.1"
+version = "0.3.2"
 authors = ["Zhe Jiang <nju.jiangzhe@gmail.com>"]
 edition = "2018"
 keywords = ["joinquant", "quant", "jqdata"]
@@ -17,4 +17,4 @@ serde_derive = "1.0"
 csv = "1.1"
 # mockito = "0.23"
 jqdata-derive = { version = "0.2.0", path = "../jqdata-derive" }
-bigdecimal = { version = "0.1", features = ["serde"] }
+bigdecimal = { version = "0.0.15", features = ["serde"] }
