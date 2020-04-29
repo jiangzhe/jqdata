@@ -1,7 +1,7 @@
 [package]
 name = "jqdata"
 description = "Rust implementation for JQData client"
-version = "0.3.2"
+version = "0.3.3"
 authors = ["Zhe Jiang <nju.jiangzhe@gmail.com>"]
 edition = "2018"
 keywords = ["joinquant", "quant", "jqdata"]
